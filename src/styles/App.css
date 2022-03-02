@@ -1,0 +1,38 @@
+.Container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+}
+
+.Left,
+.Right {
+  position: relative;
+  width: 50vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Left {
+  background-color: #222;
+}
+
+.Right {
+  background-color: #fff;
+}
+
+@media (max-width: 800px) {
+  .Container {
+    flex-direction: column;
+  }
+
+  .Left,
+  .Right {
+    width: 100vw;
+    height: 50vh;
+  }
+}
