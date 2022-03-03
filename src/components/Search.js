@@ -8,9 +8,9 @@ const Search = () => {
           <h1>Registro de aeronaves</h1>
       </header>
       <main>
-        <p class="Message">Digite o registro da aeronave</p>
-        <input type="text" id="registration" name="registration" class="Registration" maxLength='5'></input>
-        <button class="Btn-search">Buscar</button>
+        <p className="Message">Digite o registro da aeronave</p>
+        <input type="text" id="registration" name="registration" className="Registration" maxLength='5'></input>
+        <button className="Btn-search">Buscar</button>
       </main>
     </Fragment>
   );

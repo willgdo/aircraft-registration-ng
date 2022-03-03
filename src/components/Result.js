@@ -22,7 +22,7 @@ const data = [
 
 const Result = () => {
   return (
-    <div class="Card">
+    <div className="Card">
       <h2 id="prefix"> PR-AYX </h2>
 
       {data.map((item, i) => (
@@ -32,7 +32,7 @@ const Result = () => {
         </div>
       ))}
 
-      <div class="Links">
+      <div className="Links">
         <a id="rab" target="_blank">RAB</a>
         <a id="jetphotos" target="_blank">Jetphotos</a>
         <a id="flightradar" target="_blank">Flightradar24</a>
