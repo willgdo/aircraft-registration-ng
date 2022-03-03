@@ -28,16 +28,9 @@
     flex-direction: column;
   }
 
-  .Left {
-    height: 40vh;
-  }
-
-  .Right {
-    height: 60vh;
-  }
-
   .Left,
   .Right {
+    height: 50vh;
     width: 100vw;
   }
 }

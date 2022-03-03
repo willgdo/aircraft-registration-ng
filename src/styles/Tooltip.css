@@ -36,3 +36,9 @@
 .Tooltip a {
   color: #fff;
 }
+
+@media (max-width: 800px) {
+  .Tooltip {
+    margin: 15px;
+  }
+}
