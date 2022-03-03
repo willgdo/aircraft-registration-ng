@@ -2,6 +2,7 @@ import React from 'react';
 import '../styles/App.css';
 import Result from './Result';
 import Search from './Search';
+import Tooltip from './Tooltip';
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
       <section className="Right">
         <Result/>
       </section>
+      <Tooltip />
     </div>
   );
 }

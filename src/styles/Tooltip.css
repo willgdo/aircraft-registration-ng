@@ -1,0 +1,38 @@
+.Tooltip {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 50px;
+  background: #00b6ff;
+  color: white;
+  padding: 1em;
+  padding-top: 15px;
+  border-radius: 10px;
+  width: 250px;
+  clip-path: circle(10% at 90% 12%);
+  -webkit-clip-path: circle(10% at 90% 12%);;
+  transition: all 0.3s ease-in-out;
+}
+
+.Tooltip:hover {
+  clip-path: circle(100%);
+  -webkit-clip-path: circle(100%);;
+}
+
+.Tooltip:hover span {
+  opacity: 0;
+  cursor: pointer;
+}
+
+.Icon {
+  float: right;
+  font-weight: bold;
+  margin-right: 5px;
+  margin-top: 2px;
+  transition: opacity 0.3s;
+  font-size: 22px;
+}
+
+.Tooltip a {
+  color: #fff;
+}
