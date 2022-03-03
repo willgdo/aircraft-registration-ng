@@ -3,12 +3,10 @@
   height: 100vh;
   display: flex;
   justify-content: flex-start;
-  position: relative;
 }
 
 .Left,
 .Right {
-  position: relative;
   width: 50vw;
   height: 100vh;
   display: flex;
