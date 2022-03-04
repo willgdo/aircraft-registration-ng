@@ -39,6 +39,8 @@
 
 @media (max-width: 800px) {
   .Tooltip {
-    margin: 15px;
+    margin: 10px;
+    clip-path: circle(7% at 90% 12%);
+    -webkit-clip-path: circle(7% at 90% 12%);
   }
 }
