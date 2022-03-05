@@ -1,14 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../styles/App.css';
 import Result from './Result';
 import Search from './Search';
 import Tooltip from './Tooltip';
 
 const App = () => {
+  const [reg, setReg] = useState('');
+
   return (
     <div className="Container">
       <section className="Left">
-        <Search />
+      <Search setProps={setReg}/>
       </section>
       <section className="Right">
         <Result/>

@@ -2,13 +2,13 @@ import React, { Fragment, useState } from 'react';
 import axios from 'axios';
 import '../styles/Search.css';
 
-const Search = () => {
+const Search = ({ setProps }) => {
 
   const defaultMessage = "Digite o registro da aeronave";
   const notFoundMessage = "Registro não encontrado";
   const setLettersMessage = "Digite as 5 letras do registro (PR-ABC)";
 
-  const [value, setvalue] = useState("");
+  const [value, setValue] = useState("");
   const [message, setMessage] = useState(defaultMessage);
 
   const searchRegistration = () => {
@@ -29,7 +29,8 @@ const Search = () => {
       if (result.length === 1) {
         setMessage(defaultMessage);
         console.log(result);
-        setvalue("");
+        setValue("");
+        setProps(result)
       } else {
         setMessage(notFoundMessage);
       }
@@ -44,8 +45,8 @@ const Search = () => {
         <h1>Registro de aeronaves</h1>
       </header>
       <main>
-        <p className={`Message ${message !== defaultMessage? 'Error' : '' }`}>{message}</p>
-        <input onChange={e => setvalue(e.target.value)} type="text" id="registration" name="registration" className="Registration" maxLength='5' value={value} autoFocus={true}></input>
+        <p className={`Message ${message !== defaultMessage ? 'Error' : '' }`}>{message}</p>
+        <input onChange={e => setValue(e.target.value)} type="text" id="registration" name="registration" className="Registration" maxLength='5' value={value} autoFocus={true}></input>
         <button className="Btn-search" onClick={searchRegistration}>Buscar</button>
       </main>
     </Fragment>
