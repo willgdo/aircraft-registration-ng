@@ -1,36 +1,33 @@
 import React from 'react';
 import '../styles/Result.css';
 
-const data = [
-  {
-    "label": "Fabricante",
-    "value": "EMBRAER"
-  },
-  {
-    "label": "Modelo",
-    "value": "ERJ 190-200 LR"
-  },
-  {
-    "label": "Ano",
-    "value": "2011"
-  },
-  {
-    "label": "Operador",
-    "value": "AZUL LINHAS AEREAS BRASILEIRAS S.A"
-  }
-];
+const Result = (data) => {
 
-const Result = () => {
+    console.log(data);   
+
   return (
     <div className="Card">
       <h2 id="prefix"> PR-AYX </h2>
 
-      {data.map((item, i) => (
-        <div key={i} className="Tags">
-          <div>{item.label}:&nbsp;</div>
-          <div id="manufacturer">{item.value}</div>    
-        </div>
-      ))}
+      <div className="Tags">
+        <div>Fabricante:&nbsp;</div>
+        <div id="manufacturer"> </div>
+      </div>
+
+      <div className="Tags">
+        <div>Modelo:&nbsp;</div>
+        <div id="model"> </div>
+      </div>
+
+      <div className="Tags">
+        <div>Ano:&nbsp;</div>
+        <div id="year"> </div>
+      </div>
+
+      <div className="Tags">
+        <div>Operador:&nbsp;</div>
+        <div id="operator"> </div>
+      </div>
 
       <div className="Links">
         <a id="rab" target="_blank">RAB</a>

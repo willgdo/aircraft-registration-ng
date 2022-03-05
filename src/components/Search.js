@@ -28,7 +28,6 @@ const Search = ({ setProps }) => {
 
       if (result.length === 1) {
         setMessage(defaultMessage);
-        console.log(result);
         setValue("");
         setProps(result)
       } else {

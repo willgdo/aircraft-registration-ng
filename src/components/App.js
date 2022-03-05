@@ -13,7 +13,7 @@ const App = () => {
       <Search setProps={setReg}/>
       </section>
       <section className="Right">
-        <Result/>
+        <Result data={reg}/>
       </section>
       <Tooltip />
     </div>
