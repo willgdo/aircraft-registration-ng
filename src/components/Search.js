@@ -6,13 +6,10 @@ const Search = () => {
   const [value, setvalue] = useState("");
   const [message, setMessage] = useState("Digite o registro da aeronave");
 
-  const getValue= () => {
-    console.log(value.toUpperCase());
-
+  const searchRegistration = () => {
     axios('https://altinodantas.github.io/checkmark/data/dados.json')
     .then(response => {
-        const reg = response.data.filter(item => item.MARCA === value.toUpperCase());
-        console.log(reg);
+        checkRegistration(response.data)
     })
     .catch((err) => {
       console.error(err);
@@ -20,21 +17,35 @@ const Search = () => {
 
     setvalue("");
   }
- 
+
+  const checkRegistration = (data) => {
+
+    if (value.length === 5) {
+      const result = data.filter(registro => registro.MARCA === value.toUpperCase());
+
+      if (result.length === 1) {
+        setMessage("Digite o registro da aeronave");
+        console.log(result);
+      } else {
+        setMessage("Registro não encontrado")
+      }
+    } else {
+      setMessage("Digite as 5 letras do registro (PR-ABC)")
+    }
+  }
+  
   return (
     <Fragment>
       <header>
-          <h1>Registro de aeronaves</h1>
+        <h1>Registro de aeronaves</h1>
       </header>
       <main>
         <p className="Message">{message}</p>
         <input onChange={e => setvalue(e.target.value)} type="text" id="registration" name="registration" className="Registration" maxLength='5' value={value} autoFocus={true}></input>
-        <button className="Btn-search" onClick={getValue}>Buscar</button>
+        <button className="Btn-search" onClick={searchRegistration}>Buscar</button>
       </main>
     </Fragment>
   );
 }
 
 export default Search;
-
-
