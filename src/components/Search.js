@@ -44,7 +44,7 @@ const Search = () => {
         <h1>Registro de aeronaves</h1>
       </header>
       <main>
-        <p className="Message">{message}</p>
+        <p className={`Message ${message !== defaultMessage? 'Error' : '' }`}>{message}</p>
         <input onChange={e => setvalue(e.target.value)} type="text" id="registration" name="registration" className="Registration" maxLength='5' value={value} autoFocus={true}></input>
         <button className="Btn-search" onClick={searchRegistration}>Buscar</button>
       </main>
