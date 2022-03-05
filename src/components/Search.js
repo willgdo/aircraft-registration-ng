@@ -3,8 +3,13 @@ import axios from 'axios';
 import '../styles/Search.css';
 
 const Search = () => {
+
+  const defaultMessage = "Digite o registro da aeronave";
+  const notFoundMessage = "Registro não encontrado";
+  const setLettersMessage = "Digite as 5 letras do registro (PR-ABC)";
+
   const [value, setvalue] = useState("");
-  const [message, setMessage] = useState("Digite o registro da aeronave");
+  const [message, setMessage] = useState(defaultMessage);
 
   const searchRegistration = () => {
     axios('https://altinodantas.github.io/checkmark/data/dados.json')
@@ -14,23 +19,22 @@ const Search = () => {
     .catch((err) => {
       console.error(err);
     });
-
-    setvalue("");
   }
 
   const checkRegistration = (data) => {
 
     if (value.length === 5) {
-      const result = data.filter(registro => registro.MARCA === value.toUpperCase());
+      const result = data.filter(reg => reg.MARCA === value.toUpperCase());
 
       if (result.length === 1) {
-        setMessage("Digite o registro da aeronave");
+        setMessage(defaultMessage);
         console.log(result);
+        setvalue("");
       } else {
-        setMessage("Registro não encontrado")
+        setMessage(notFoundMessage);
       }
     } else {
-      setMessage("Digite as 5 letras do registro (PR-ABC)")
+      setMessage(setLettersMessage);
     }
   }
   
