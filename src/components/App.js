@@ -10,7 +10,7 @@ const App = () => {
   return (
     <div className="Container">
       <section className="Left">
-      <Search setProps={setReg}/>
+        <Search setProps={setReg}/>
       </section>
       <section className="Right">
         <Result data={reg}/>

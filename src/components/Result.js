@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import '../styles/Result.css';
 
 const formatPrefix = (reg) => {
@@ -9,9 +9,9 @@ const formatPrefix = (reg) => {
 
 const Result = (data) => {
   return (
-    <div className="Card">
+    <Fragment>
       {data.data.length > 0 ? (
-        <div>
+        <div className="Card">
           {data.data.map((reg, i) => (
             <div key={i}>
               <h2 id="prefix"> {formatPrefix(reg.MARCA)} </h2>
@@ -93,7 +93,7 @@ const Result = (data) => {
           </div>
         </div>
       )}
-    </div>
+    </Fragment>
   );
 }
 
