@@ -9,9 +9,9 @@ const formatPrefix = (reg) => {
 
 const Result = (data) => {
   return (
-    <Fragment>
+    <div className="Card">
       {data.data.length > 0 ? (
-        <div className="Card">
+        <Fragment>
           {data.data.map((reg, i) => (
             <div key={i}>
               <h2 id="prefix"> {formatPrefix(reg.MARCA)} </h2>
@@ -61,7 +61,7 @@ const Result = (data) => {
               </div>
             </div>
           ))}
-        </div>
+        </Fragment>
       ) : (
         <div>
           <h2 id="prefix"> - </h2>
@@ -93,7 +93,7 @@ const Result = (data) => {
           </div>
         </div>
       )}
-    </Fragment>
+    </div>
   );
 }
 
