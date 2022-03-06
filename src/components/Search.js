@@ -41,7 +41,7 @@ const Search = ({ setProps }) => {
   return (
     <Fragment>
       <header>
-        <h1>Registro de aeronaves</h1>
+        <h1>Registro de aeronaves ✈️</h1>
       </header>
       <main>
         <p className={`Message ${message !== defaultMessage ? 'Error' : '' }`}>{message}</p>
