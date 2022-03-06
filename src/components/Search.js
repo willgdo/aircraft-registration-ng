@@ -10,10 +10,14 @@ const Search = ({ setProps }) => {
 
   const [value, setValue] = useState("");
   const [message, setMessage] = useState(defaultMessage);
+  const [loading, setLoading] = useState(true);
 
   const searchRegistration = () => {
+    setMessage(loading ? 'Buscando' : defaultMessage);
+
     axios('https://altinodantas.github.io/checkmark/data/dados.json')
     .then(response => {
+        setLoading(false);
         checkRegistration(response.data)
     })
     .catch((err) => {
