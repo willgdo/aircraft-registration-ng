@@ -58,6 +58,22 @@ main {
   color: rgb(255, 0, 0);;
 }
 
+.Loader {
+  animation: is-rotating 1s infinite;
+  border: 5px solid #e5e5e5;
+  border-radius: 50%;
+  border-top-color: #00b6ff;
+  height: 25px;
+  width: 25px;
+  margin-top: 15px;
+}
+
+@keyframes is-rotating {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
 @media (max-width: 800px) {
   header h1 {
     font-size: 1.5em;

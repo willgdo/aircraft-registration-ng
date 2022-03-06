@@ -10,11 +10,14 @@ const Search = ({ setProps }) => {
 
   const [value, setValue] = useState("");
   const [message, setMessage] = useState(defaultMessage);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
+
+  const initSearch = () => {
+    setLoading(true);
+    searchRegistration();
+  }
 
   const searchRegistration = () => {
-    setMessage(loading ? 'Buscando' : defaultMessage);
-
     axios('https://altinodantas.github.io/checkmark/data/dados.json')
     .then(response => {
         setLoading(false);
@@ -48,9 +51,13 @@ const Search = ({ setProps }) => {
         <h1>Registro de aeronaves ✈️</h1>
       </header>
       <main>
-        <p className={`Message ${message !== defaultMessage ? 'Error' : '' }`}>{message}</p>
-        <input onChange={e => setValue(e.target.value)} type="text" id="registration" name="registration" className="Registration" maxLength='5' value={value} autoFocus={true}></input>
-        <button className="Btn-search" onClick={searchRegistration}>Buscar</button>
+      <p className={`Message ${message !== defaultMessage ? 'Error' : '' }`}>{message}</p>
+      <input onChange={e => setValue(e.target.value)} type="text" id="registration" name="registration" className="Registration" maxLength='5' value={value} autoFocus={true}></input>
+      {loading ? (
+        <span className="Loader"></span> 
+      ) : (
+        <button className="Btn-search" onClick={initSearch}>Buscar</button>
+      )}
       </main>
     </Fragment>
   );

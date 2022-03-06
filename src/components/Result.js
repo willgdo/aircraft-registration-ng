@@ -2,10 +2,10 @@ import React from 'react';
 import '../styles/Result.css';
 
 const formatPrefix = (reg) => {
-  const registration = reg.slice(0, 2) + '-' + reg.slice(2,5).toString();
+  const registration = reg.slice(0, 2) + '-' + reg.slice(2, 5).toString();
 
   return registration;
-} 
+}
 
 const Result = (data) => {
   return (
@@ -37,27 +37,27 @@ const Result = (data) => {
               </div>
 
               <div className="Links">
-                <a 
+                <a
                   href={`https://sistemas.anac.gov.br/aeronaves/cons_rab_resposta.asp?textMarca=${reg.MARCA}`}
                   id="rab"
                   target="_blank"
                   rel="noreferrer">
-                    RAB
-                  </a>
-                <a 
+                  RAB
+                </a>
+                <a
                   href={`https://www.jetphotos.com/photo/keyword/${formatPrefix(reg.MARCA)}`}
                   id="jetphotos"
                   target="_blank"
                   rel="noreferrer">
-                    Jetphotos
-                  </a>
-                <a 
+                  Jetphotos
+                </a>
+                <a
                   href={`https://www.flightradar24.com/data/aircraft/${reg.MARCA.toLowerCase()}`}
                   id="flightradar"
                   target="_blank"
                   rel="noreferrer">
-                    Flightradar24
-                  </a>
+                  Flightradar24
+                </a>
               </div>
             </div>
           ))}
