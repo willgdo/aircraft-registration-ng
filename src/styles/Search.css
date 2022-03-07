@@ -43,11 +43,13 @@ main {
   background-color: #efefef;
   border: none;
   transition: all 0.3s ease-in-out;
-  padding: 20px 45px;
+  padding: 10px 30px;
   border-radius: 5px;
   cursor: pointer;
   margin-top: 15px;
   font-size: 1em;
+  display: flex;
+  align-items: center;
 }
 
 .Btn-Search:hover {
@@ -58,7 +60,7 @@ main {
   color: rgb(255, 0, 0);
 }
 
-/* .Loader {
+.Loader {
   animation: is-rotating 1s infinite;
   border: 5px solid #e5e5e5;
   border-radius: 50%;
@@ -66,10 +68,10 @@ main {
   height: 25px;
   width: 25px;
   margin-top: 15px;
-} */
+}
 
 .Loader-Radar {
-  margin-top: 15px;
+  margin-right: 10px;
   border-radius: 50%;
   border: 1px solid green;
 }
@@ -88,7 +90,7 @@ main {
   .Icon-Plane {
     display: none;
   }
-
+  
   .Registration {
     width: 30vh;
     height: 50px;
