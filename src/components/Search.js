@@ -48,7 +48,7 @@ const Search = ({ setProps }) => {
   return (
     <Fragment>
       <header>
-        <h1>Registro de aeronaves ✈️</h1>
+        <h1>Registro de aeronaves <span className="Icon-Plane">✈️</span></h1>
       </header>
       <main>
       <p className={`Message ${message !== defaultMessage ? 'Error' : '' }`}>{message}</p>
@@ -56,7 +56,7 @@ const Search = ({ setProps }) => {
       {loading ? (
         <span className="Loader"></span> 
       ) : (
-        <button className="Btn-search" onClick={initSearch}>Buscar</button>
+        <button className="Btn-Search" onClick={initSearch}>Buscar</button>
       )}
       </main>
     </Fragment>

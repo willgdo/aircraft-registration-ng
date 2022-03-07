@@ -40,6 +40,11 @@
   color: #fff;
 }
 
+.Hide a {
+  color: #222!important;
+  cursor: default;
+}
+
 .Links a:hover {
   opacity: 0.7;
 }
