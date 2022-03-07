@@ -19,6 +19,12 @@ const Search = ({ setProps }) => {
 
   const searchRegistration = () => {
     axios('https://altinodantas.github.io/checkmark/data/dados.json')
+    // axios('https://sistemas.anac.gov.br/dadosabertos/Aeronaves/RAB/dados_aeronaves.json', {
+    //   headers: {
+    //     'Access-Control-Allow-Origin': '*',
+    //     'Content-Type': 'application/json',
+    //   },
+    // })
     .then(response => {
         setLoading(false);
         checkRegistration(response.data)
