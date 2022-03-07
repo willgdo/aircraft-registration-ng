@@ -26,7 +26,6 @@ const Result = (data) => {
     }
   }, [data.data])
 
-
   return (
     <div className="Card">
       <h2 id="prefix"> {formatPrefix(prefix)} </h2>

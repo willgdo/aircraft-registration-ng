@@ -54,7 +54,8 @@ const Search = ({ setProps }) => {
       <p className={`Message ${message !== defaultMessage ? 'Error' : '' }`}>{message}</p>
       <input onChange={e => setValue(e.target.value)} type="text" id="registration" name="registration" className="Registration" maxLength='5' value={value} autoFocus={true}></input>
       {loading ? (
-        <span className="Loader"></span> 
+        <img className="Loader-Radar" src="https://c.tenor.com/8Juj0k-1L4AAAAAd/radar-love-search.gif" alt="loading" width="50px" height="50px"/>
+        // <span className="Loader"></span> 
       ) : (
         <button className="Btn-Search" onClick={initSearch}>Buscar</button>
       )}

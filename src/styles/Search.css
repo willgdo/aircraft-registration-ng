@@ -55,10 +55,10 @@ main {
 }
 
 .Error {
-  color: rgb(255, 0, 0);;
+  color: rgb(255, 0, 0);
 }
 
-.Loader {
+/* .Loader {
   animation: is-rotating 1s infinite;
   border: 5px solid #e5e5e5;
   border-radius: 50%;
@@ -66,6 +66,12 @@ main {
   height: 25px;
   width: 25px;
   margin-top: 15px;
+} */
+
+.Loader-Radar {
+  margin-top: 15px;
+  border-radius: 50%;
+  border: 1px solid green;
 }
 
 @keyframes is-rotating {
