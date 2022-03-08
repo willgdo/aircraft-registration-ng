@@ -8,7 +8,7 @@ const Tooltip = () => {
       <p>Olá!</p>
       <p>
         Essa página foi desenvolvida para pessoas que apreciam a aviação,
-        ajudando na busca de informações de aeronaves brasileiras,
+        ajudando na busca de informações de aeronaves civis brasileiras,
         tendo como fonte o <a href="https://sistemas.anac.gov.br/aeronaves/cons_rab.asp" target="_blank" rel="noreferrer">RAB</a>.
       </p>
       <p>
