@@ -2,6 +2,7 @@
   "name": "aircraft-registration-ng",
   "version": "0.1.0",
   "private": true,
+  "proxy": "https://sistemas.anac.gov.br",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.3",
